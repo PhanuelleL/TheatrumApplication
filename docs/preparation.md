@@ -12,3 +12,8 @@ Ce theatre cible toute personnes amateurs de littérature romantique, les passio
 - Ottawa Theatre : https://www.ottawa-theatre.com/
 - Broadway In Ottawa : https://ottawa.broadway.com/
 
+
+ *  **Membre de l'equipe** :
+  - Lady Phanuelle Lienou Ngandim
+  - Dimitri Vanel Takemte Zebaze
+
