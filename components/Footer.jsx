@@ -1,4 +1,4 @@
-function _BoxOffice() {
+function BoxOffice() {
     return (
         <div>
           <h3 className="font-bold uppercase mb-3">Box Office</h3>
@@ -9,7 +9,7 @@ function _BoxOffice() {
 }
 
 
-function _StayInformed() {
+function StayInformed() {
     return (
         <div>
           <h3 className="font-bold uppercase mb-3">Rester informé</h3>
@@ -24,8 +24,8 @@ export default function Footer() {
           {/* Première rangée */}
           <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
             <BoxOffice />
-            <Address />
-            <Navigation />
+            {/* <Address /> */}
+            {/* <Navigation /> */}
             <StayInformed />
           </div>
     
