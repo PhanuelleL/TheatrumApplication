@@ -8,8 +8,8 @@ import levent from "@/public/img/levent.webp";
 export default function Home() {
 
     return (
-        <main>
-            <div className="relative w-full h-screen bg-black">
+        <main className='flex-1 bg-black'>
+            <div className="relative h-screen max-w-7xl mx-auto flex">
                 <Image
                     src={background}
                     alt="bg haut"
@@ -17,8 +17,8 @@ export default function Home() {
                     objectFit="cover"
                     className="absolute w-full h-full"
                 />
-                <div className ='absolute top-0 left-0 w-full bg-opacity-30 bg-black flex justify-center py-4'>
-                    <ul className= "flex space-x-10 text-white text-lg">
+                <div className ='flex relative top-0 left-0 w-full bg-opacity-30 bg-black flex justify-center py-4 '>
+                    <ul className= "flex space-x-4 px-2 text-white text-sm sm:text-lg">
                         <li className="rounded-full border-solid border-2 w-1/5 h-8 text-center  hover:border-yellow-400">
                             <a href="#">All</a>
                         </li>
@@ -37,34 +37,25 @@ export default function Home() {
                         <li className="rounded-full border-solid border-2 w-1/5 h-8 text-center hover:border-yellow-400">
                             <a href="#">Summer</a>
                         </li>
-                        <li className="rounded-full border-solid border-2 w-1/5 h-8 text-center hover:border-yellow-400">
-                            <a href="#">Genre</a>
-                        </li>
+                        
                     </ul>
                 </div>
-                <div className="absolute top-40 left-10">
-                    <h1 className="text-white text-7xl font-bold tracking-wide">
+
+                <div className="absolute top-1/4  left-5 sm:left-10 md:left-14 lg:left-20 text-left">
+                    <h1 className="text-white text-4xl sm:text-2xl md:text-3xl lg:text-5xl font-bold tracking-wide">
                         THEATRUM CANADA
                     </h1>
-                    <h2 className="text-yellow-200 text-2xl mt-2 font-light drop-shadow-lg">
+                    <h2 className="text-yellow-200 text-lg sm:text-2xl md:text-3xl lg:text-2xl mt-2 font-light drop-shadow-lg">
                         Vivez la magie des émotions de vos romans
                     </h2>
-                    <div className="absolute top-60 left-10">
-                        <Image
-                        src={book2}
-                        alt="Logo Theatrum"
-                        width={300}
-                        height={150}
-                        />
-                    </div>
                 </div>
 
-                <div className="absolute top-40 right-10">
+                <div className="absolute bottom-20 right-5 sm:bottom-10 sm:right-10 md:right-10 lg:top-1/4 lg:right-10">
                     <Image
                     src={book}
                     alt="Logo Theatrum"
-                    width={500}
-                    height={500}
+                    width={600}
+                    height={600}
                     />
                 </div>
             </div>
