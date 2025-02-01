@@ -9,11 +9,18 @@ import { GrLanguage } from "react-icons/gr";
 import Image from "next/image";
 import TheaTrumBook from "@/public/img/TheaTrumBook.webp";
 
+import Shows1 from "@/components/Shows1";
+import Shows2 from "@/components/Shows2";
+
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // État du menu
-
+    const [isShowsDropdownOpen, setIsShowsDropdownOpen] = useState(false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Inverser l'état
+    };
+
+    const toggleShowsDropdown = () => {
+        setIsShowsDropdownOpen(!isShowsDropdownOpen); // Inverser l'état du dropdown Shows
     };
 
     return (
@@ -76,13 +83,24 @@ export default function Header() {
                     <li>
                         <button className="flex items-center space-x-2 hover:text-yellow-500">
                             <IoMdHome size={25} color="#FFD700" />
-                            <span>Home</span>
                         </button>
                     </li>
                     <li>
-                        <button className="hover:border-b-4 hover:border-yellow-500 active:border-yellow-500">
-                            Shows
-                        </button>
+                    <div className="relative">
+                            <button
+                                onClick={toggleShowsDropdown}
+                                className="hover:border-b-4 hover:border-yellow-500 active:border-yellow-500"
+                            >
+                                Shows
+                            </button>
+                            {/* Dropdown Shows */}
+                            {isShowsDropdownOpen && (
+                                <div className="absolute top-full left-0 bg-black border border-yellow-500 mt-2 rounded-lg">
+                                    <p>Show 1</p>
+                                    <p>Show 2</p>
+                                </div>
+                            )}
+                        </div>
                     </li>
                     <li>
                         <button className="hover:border-b-4 hover:border-yellow-500">
