@@ -95,9 +95,9 @@ export default function Header() {
                             </button>
                             {/* Dropdown Shows */}
                             {isShowsDropdownOpen && (
-                                <div className="absolute top-full left-0 bg-black border border-yellow-500 mt-2 rounded-lg">
-                                    <p>Show 1</p>
-                                    <p>Show 2</p>
+                                <div className="absolute top-full left-0 bg-black border border-yellow-500 mt-0 rounded-lg">
+                                    <p>Show1</p>
+                                    <p>Show2</p>
                                 </div>
                             )}
                         </div>

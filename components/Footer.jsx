@@ -31,12 +31,14 @@ export default function Footer() {
                 <div className="text-center md:text-left">
                     <h3 className="font-bold uppercase mb-3 text-lg text-yellow-500">Navigation rapide</h3>
                     <ul className="flex flex-col gap-2">
-                        <li><button className="hover:underline text-gray-400">Accueil</button></li>
-                        <li><button className="hover:underline text-gray-400">Spectacles</button></li>
-                        <li><button className="hover:underline text-gray-400">Dates</button></li>
-                        <li><button className="hover:underline text-gray-400">Billets</button></li>
-                        <li><button className="hover:underline text-gray-400">Contacts</button></li>
-                    </ul>
+    {["Accueil", "Spectacle", "Dates", "Billets", "Contacts"].map((item, index) => (
+        <li key={index}>
+            <a href="#" className="hover:underline text-gray-400">
+                {item}  {/* Utilisation correcte de item directement */}
+            </a>
+        </li>
+    ))}
+</ul>
                 </div>
  
                 {/* pour tout les differents Réseaux sociaux */}
