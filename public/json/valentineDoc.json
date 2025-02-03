@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "time": "09H00",
+        "title": "Accueil & Déco Romantique",
+        "description": "⭐ Plonge dans un univers romantique dès ton arrivée à notre événement spécial Saint-Valentin ! Laisse-toi envoûter par des pétales de roses, des lumières tamisées et un « Mur des Mots d'Amour » où tu pourras inscrire ta propre déclaration ou citation romantique. Et pourquoi ne pas capturer ce moment magique au photobooth avec des accessoires vintage et des costumes d’époque ? Viens t’imprégner de cette atmosphère unique et amorce cette journée magique avec nous ! Ce qui t'attend : 🌹 Crée ton propre message d'amour et dépose-le sur le Mur des Mots d'Amour 📸 Immortalise ce moment avec un souvenir unique grâce au photobooth romantique 💡 Profite d'une décoration féérique pour commencer la journée en beauté",
+        "image": "/img/imageB_1.webp",
+        "price": "Gratuit",
+        "location": "Hall Principal"
+    },
+    {
+        "id": 2,
+        "time": "10H00",
+        "title": "Spectacle : Le Procès de l'Amour",
+        "description": "🔥 Prépare-toi à vivre une expérience inédite avec ce spectacle interactif ! Défends l’amour lors d’un procès où toi et d’autres spectateurs deviendrez acteurs de cette pièce originale. Oses-tu participer et faire entendre ta voix dans un théâtre plein de passion et d'humour ? Le Procès de l'Amour va te captiver et te surprendre à chaque instant ! Ce qui t'attend : 🎭 Participe activement à une pièce où chaque action compte 💬 Défends l'amour, mets ta passion à l’épreuve et rends cette expérience inoubliable 🎤 Laisse-toi embarquer dans une aventure où ton avis peut changer le cours du spectacle",
+        "image": "/img/imageB_2.webp",
+        "price": "20$",
+        "location": "Salle de Théâtre"
+    },
+    {
+        "id": 3,
+        "time": "12H30",
+        "title": "Déjeuner Romantique",
+        "description": "🍽️ Rejoins-nous pour un déjeuner pas comme les autres, où les saveurs et les défis amoureux s'entrelacent ! Entre deux bouchées délicieuses, relève des défis romantiques avec ton partenaire et tisse des liens encore plus forts. Une expérience à savourer et à partager dans une ambiance chaleureuse et conviviale ! Ce qui t'attend : 🥂 Savoure un buffet romantique avec des mets délicieux 💌 Relevez des défis amoureux et écrivez des messages d’amour surprises 🎉 Participe à des animations surprises qui rendent ce déjeuner encore plus spécial",
+        "image": "/img/imageB_3.webp",
+        "price": "30$",
+        "location": "Salle à Manger"
+    },
+    {
+        "id": 4,
+        "time": "16H00",
+        "title": "Théâtre d'Improvisation : Histoires d'Amour du Public",
+        "description": "🎭 Laisse-toi emporter par cette performance interactive où les spectateurs deviennent les véritables stars ! Partage une anecdote amoureuse et regarde-la se transformer en un instant théâtral hilarant et émouvant. Cette expérience improvisée te promet des rires et des émotions à partager avec tous ! Ce qui t'attend : 💬 Partage tes histoires d'amour et vois-les prendre vie sur scène 🎭 Rires, surprises et moments inoubliables à chaque instant 🎤 Une performance unique où le public devient acteur de l’histoire",
+        "image": "/img/imageB_4.webp",
+        "price": "15$",
+        "location": "Scène Ouverte"
+    },
+    {
+        "id": 5,
+        "time": "17H30",
+        "title": "Mini-Ciné Live : Les Plus Belles Scènes de Comédies Romantiques",
+        "description": "🎬 Viens redécouvrir les scènes les plus mémorables de tes films romantiques préférés, mais cette fois-ci, en live ! Avec des acteurs talentueux, prépare-toi à revivre ces moments émouvants et magiques sur scène, comme si tu y étais. L’adaptation théâtrale des scènes cultes te fera rire, pleurer et rêver ! Ce qui t'attend : 💘 Revivez les scènes de comédies romantiques les plus iconiques, de manière interactive 🎭 Une performance théâtrale pleine d’émotions et de charme 💃 Laisse-toi emporter par la magie du théâtre et des films d’amour",
+        "image": "/img/imageB_5.webp",
+        "price": "25$",
+        "location": "Salle de Projection"
+    },
+    {
+        "id": 6,
+        "time": "21H00",
+        "title": "Final Grandiose : Déclaration sous les Étoiles",
+        "description": "✨ Clôture cette journée exceptionnelle de manière spectaculaire sous un ciel étoilé ! Participe à la lecture de déclarations d'amour, assiste à un concert live émouvant et profite des animations lumineuses qui illumineront la nuit. C’est le moment parfait pour déclarer ton amour ou t’offrir un souvenir mémorable. Ce qui t'attend : 🌟 Des déclarations d’amour poignantes sous un ciel étoilé 🎶 Un concert live qui réchauffera ton cœur 💡 Des animations lumineuses pour une soirée magique et romantique",
+        "image": "/img/imageB_6.webp",
+        "price": "Gratuit",
+        "location": "Jardin Extérieur"
+    }
+]
