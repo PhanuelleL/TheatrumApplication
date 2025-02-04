@@ -17,7 +17,7 @@ return (
                     className="w-full h-80 object-cover" 
                 />
                 <div className="p-6">
-                <button onClick={() => setIsExpanded(!isExpanded)}> <h2 className="text-2xl font-semibold text-pink-400">{doc.title}</h2> </button>
+                <button onClick={() => setIsExpanded(!isExpanded)}> <h2 className="text-2xl font-semibold text-yellow-400">{doc.title}</h2> </button>
                 
                 {isExpanded ? (
                     <div> 

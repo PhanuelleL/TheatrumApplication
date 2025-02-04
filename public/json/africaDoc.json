@@ -4,7 +4,7 @@
         "time": "09H00",
         "title": "Accueil & Ambiance Africaine",
         "description": "🌍 Plonge dans l’ambiance vibrante de l’Afrique dès ton arrivée ! Découvre une décoration inspirée des cultures africaines avec des tissus colorés, des masques traditionnels et des percussions résonnantes. Profite du stand de peinture faciale et habille-toi aux couleurs du continent ! Ce qui t'attend : 🎨 Peinture faciale aux motifs africains 🎭 Photobooth avec tenues traditionnelles 🎶 Musique live de percussions",
-        "image": "/img/spectacle_1.webp",
+        "image": "/img/image_A3.webp",
         "price": "Gratuit",
         "location": "Hall Principal"
     },
@@ -13,7 +13,7 @@
         "time": "11H00",
         "title": "Spectacle de Danse Traditionnelle",
         "description": "💃 Vibrez au rythme des danses africaines exécutées par des troupes talentueuses ! Découvrez des performances allant du Ndombolo au Sabar, en passant par le coupé-décalé et le Gwara Gwara. Ce qui t'attend : 🔥 Démonstrations de danse spectaculaire 🎤 Interactions avec les danseurs 🥁 Percussions live pour une ambiance envoûtante",
-        "image": "/img/spectacle_2.webp",
+        "image": "/img/image_A2.webp",
         "price": "15$",
         "location": "Scène Principale"
     },
@@ -22,7 +22,7 @@
         "time": "13H00",
         "title": "Dégustation de Plats Africains",
         "description": "🍛 Laisse-toi emporter par un voyage culinaire à travers l'Afrique ! Déguste des plats emblématiques comme le mafé, le thieboudienne, le fufu et bien plus encore. Ce qui t'attend : 🍲 Buffet de spécialités africaines 🍹 Boissons et jus naturels traditionnels 🎶 Ambiance musicale live",
-        "image": "/img/spectacle_3.webp",
+        "image": "/img/imageA_5.webp",
         "price": "25$",
         "location": "Espace Restauration"
     },
@@ -31,7 +31,7 @@
         "time": "15H30",
         "title": "Théâtre & Contes d’Afrique",
         "description": "📖 Plonge dans les récits fascinants des griots et découvre les légendes ancestrales du continent africain. Entre humour, sagesse et émotions, cette session te transportera dans un autre univers ! Ce qui t'attend : 🎭 Saynètes inspirées de contes africains 🎤 Interventions de griots et conteurs 🎶 Ambiance musicale traditionnelle",
-        "image": "/img/spectacle_4.webp",
+        "image": "/img/image_A4.webp",
         "price": "10$",
         "location": "Salle de Théâtre"
     },
@@ -40,7 +40,7 @@
         "time": "18H00",
         "title": "Concert Live : Les Voix d’Afrique",
         "description": "🎶 Vibrez au son des voix puissantes et mélodieuses d’artistes africains de renom. Du highlife au mbalax, en passant par l’afrobeat et le zouglou, cette soirée promet d’être mémorable ! Ce qui t'attend : 🎤 Performances live d’artistes africains 🎵 Divers genres musicaux pour tous les goûts 🥁 Percussions et danses interactives",
-        "image": "/img/spectacle_5.webp",
+        "image": "/img/imageA_5.webp",
         "price": "30$",
         "location": "Grande Scène Extérieure"
     },
@@ -49,7 +49,7 @@
         "time": "21H00",
         "title": "Finale Grandiose : Feu de Camp & Danses",
         "description": "🔥 Termine cette journée inoubliable autour d’un feu de camp en dansant sur des rythmes traditionnels et modernes africains. Un moment de partage et de convivialité unique ! Ce qui t'attend : 🌟 Feu de camp sous les étoiles 💃 Danse libre avec artistes et spectateurs 🎤 Jam session ouverte à tous",
-        "image": "/img/spectacle_6.webp",
+        "image": "/img/image_A1.webp",
         "price": "Gratuit",
         "location": "Espace Extérieur"
     }
