@@ -1,5 +1,4 @@
 import BarShows from "./BarShows";
-import SlideImage from "./SlideImages";
 import docList from "@/public/json/africaDoc.json";
 import imageA_0 from "@/public/img/imageA_0.webp";
 import CarteValentine from "./CarteValentine";
@@ -23,6 +22,7 @@ export default function Shows1({ changePage }) {
                     height={100}
                     className="w-full h-80 object-cover" 
                 />
+                <Timer targetDate="2025-04-24T00:00:00"/>
             </div>
     
             {/* Conteneur de la galerie

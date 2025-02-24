@@ -1,4 +1,4 @@
-
+import Timer from './Timer';
 import BarShows from "./BarShows";
 import docList from "@/public/json/valentineDoc.json";
 import CarteValentine from "./CarteValentine";
@@ -21,6 +21,7 @@ export default function Shows2({ changePage }) {
                             height={100}
                             className="w-full h-80 object-cover" 
                         />
+                        <Timer targetDate="2025-02-14T00:00:00"/>
             </div>
 
             <h1 className="text-3xl italic font-bold bg-black bg-opacity-50 text-white px-4 py-2 border-b-3 border-yellow-400  rounded-lg">Journée Spéciale Saint-Valentin </h1>
