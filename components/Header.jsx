@@ -8,6 +8,11 @@ import { IoMdClose, IoMdHome } from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
 import { GrLanguage } from "react-icons/gr";
 import { FaPhone } from "react-icons/fa6";
+import { IoSunny } from "react-icons/io5";
+import { IoMdMoon } from "react-icons/io";
+
+import { useMyContext } from "@/provider/MyContextProvider";
+
 import Image from "next/image";
 import TheaTrumBook from "@/public/img/TheaTrumBook.webp";
 
@@ -16,6 +21,7 @@ export default function Header() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Inverser l'état
     };
+    const { theme, toggleTheme } = useMyContext();
 
     return (
      <header className="bg-black">
@@ -49,14 +55,23 @@ export default function Header() {
        </div>
 
        {/* Icônes (compte, localisation, favoris, langue) */}
-                <div className="flex items-center space-x-5">
-                    <Link href='/connexion'><MdAccountCircle color="FFD700" size={30} className="cursor-pointer" /></Link>
-        
+       <div className="flex items-center space-x-5">
+        <Link href="/connexion">
+         <MdAccountCircle color="FFD700" size={30} className="cursor-pointer" />
+        </Link>
+
         <IoLocationSharp color="FFD700" size={30} className="cursor-pointer" />
         <MdFavorite color="FFD700" size={30} className="cursor-pointer" />
         <Link href="/contact">
          <FaPhone color="FFD700" size={25} className="cursor-pointer" />
         </Link>
+        <button className="ml-auto text-2xl" onClick={toggleTheme}>
+         {theme === "light" ? (
+          <IoMdMoon color="FFD700" />
+         ) : (
+          <IoSunny color="FFD700" />
+         )}
+        </button>
 
         {/* Bouton du menu mobile (visible uniquement sur les petits écrans) */}
         <button

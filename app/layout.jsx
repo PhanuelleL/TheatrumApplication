@@ -6,6 +6,10 @@ import Footer from '@/components/Footer'
 import Acceuil from '@/components/Acceuil';
 import Shows1 from '@/components/Shows1';
 import Shows2 from '@/components/Shows2';
+import Body from "@/components/Body";
+
+import MyContextProvider from "@/provider/MyContextProvider";
+
 
 import './globals.css';
 
@@ -18,14 +22,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
     return (
-        <html lang='en'>
-            <body className={inter.className}>
-                <Header/>
-                {children}
-                
-                <Footer/>
-            </body>
-        </html>
+     <html lang="en">
+      <MyContextProvider>
+       {" "}
+       <Body children={children}/>
+      </MyContextProvider>
+     </html>
     );
 }
 
