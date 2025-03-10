@@ -8,7 +8,7 @@ export default function CarteValentine({ doc }) {
 return (
  <div
   key={doc.id}
-  className="bg-black-800 border-b-4 border-yellow-400 rounded-lg overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105"
+  className=" border-b-4 border-yellow-400 rounded-lg overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105"
  >
   <Image
    src={doc.image}

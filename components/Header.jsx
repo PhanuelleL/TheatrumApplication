@@ -11,6 +11,9 @@ import { FaPhone } from "react-icons/fa6";
 import { IoSunny } from "react-icons/io5";
 import { IoMdMoon } from "react-icons/io";
 
+import i18next from 'i18next';
+import { useRouter } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import { useMyContext } from "@/provider/MyContextProvider";
 
 import Image from "next/image";
@@ -23,8 +26,11 @@ export default function Header() {
     };
     const { theme, toggleTheme } = useMyContext();
 
+    const { t } = useTranslation("header");
+    const routeur = useRouter();
+    
     return (
-     <header className="bg-black">
+     <header>
       {/* Barre de navigation principale */}
       <nav className="container mx-auto flex max-w-7xl justify-between items-center p-4 lg:px-8">
        {/* Logo */}
@@ -73,6 +79,15 @@ export default function Header() {
          )}
         </button>
 
+        <select
+         onChange={(e) => i18next.changeLanguage(e.target.value)}
+         defaultValue={i18next.language}
+         className="text-black bg-yellow-400 border-color-yellow"
+        >
+         <option value="en">EN</option>
+         <option value="fr">FR</option>
+        </select>
+
         {/* Bouton du menu mobile (visible uniquement sur les petits écrans) */}
         <button
          className="md:hidden"
@@ -89,10 +104,8 @@ export default function Header() {
       </nav>
 
       {/* Menu de navigation (mobile et desktop) */}
-      <div
-       className={`${isMenuOpen ? "block" : "hidden"} md:block bg-black py-3`}
-      >
-       <ul className="flex flex-col md:flex-row md:space-x-7 space-y-3 md:space-y-0 text-white text-lg items-center justify-center">
+      <div className={`${isMenuOpen ? "block" : "hidden"} md:block py-3`}>
+       <ul className="flex flex-col md:flex-row md:space-x-7 space-y-3 md:space-y-0 text-lg items-center justify-center">
         <li>
          <Link
           href="/"
@@ -104,27 +117,27 @@ export default function Header() {
 
         <li>
          <button className="hover:border-b-4 hover:border-yellow-500">
-          Dates
+          {t("header.dates")}
          </button>
         </li>
         <li>
          <button className="hover:border-b-4 hover:border-yellow-500">
-          Reviews
+          {t("header.reviews")}
          </button>
         </li>
         <li>
          <button className="hover:border-b-4 hover:border-yellow-500">
-          Tickets
+          {t("header.tickets")}
          </button>
         </li>
         <li>
          <button className="hover:border-b-4 hover:border-yellow-500">
-          Books
+          {t("header.book")}
          </button>
         </li>
         <li>
          <button className="hover:border-b-4 hover:border-yellow-500">
-          Special
+          {t("header.special")}
          </button>
         </li>
        </ul>
