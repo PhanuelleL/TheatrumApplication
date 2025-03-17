@@ -1,7 +1,7 @@
 "use client";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { use, useState } from "react";
+import { useState } from "react";
 
 export default function Contact() {
  const [result, setResult] = useState("");
@@ -45,7 +45,7 @@ export default function Contact() {
     },
     (error) => {
      setResult("Erreur lors de l'envoi du message.");
-     setSuccess(false);
+     setSuccess(true);
     }
    )
 
@@ -61,7 +61,6 @@ export default function Contact() {
     <h1 className="text-4xl font-bold text-yellow-400 mb-6 text-center border-b-4 border-yellow-400 pb-2">
      Contactez-nous
     </h1>
-
     <label className="block text-white font-semibold mt-4">
      Nom:
      <input
@@ -73,7 +72,6 @@ export default function Contact() {
       <span className="text-yellow-500 text-xs">{errors.nom.message}</span>
      )}
     </label>
-
     <label className="block text-gold font-semibold mt-4">
      Email:
      <input
@@ -92,23 +90,31 @@ export default function Contact() {
       <span className="text-yellow-500 text-xs">{errors.email.message}</span>
      )}
     </label>
-
     <label className="block text-gold font-semibold mt-4">
      Objet:
      <input
-      {...register("objet")}
+      {...register("objet", { required: "Champ obligatoire" })}
       type="text"
       className="w-full p-3 rounded bg-black border border-gold text-white focus:ring-2 focus:ring-bordeaux"
      />
+     {errors.objet && (
+      <span className="text-yellow-500 text-xs">{errors.objet.message}</span>
+     )}
+    </label>
+    <label className="block text-gold font-semibold mt-4">
+     Message:
+     <textarea
+      {...register("message", { required: "Champ obligatoire" })}
+      className="w-full p-3 rounded bg-black border border-gold text-white focus:ring-2 focus:ring-bordeaux"
+      rows={5}
+     ></textarea>
+     {errors.message && (
+      <span className="text-yellow-500 text-xs">{errors.message.message}</span>
+     )}
     </label>
 
-    <label className="block text-gold font-semibold mt-4">Message:</label>
-    <textarea
-     {...register("message")}
-     className="w-full p-3 rounded bg-black border border-gold text-white focus:ring-2 focus:ring-bordeaux"
-     rows={5}
-    ></textarea>
-
+       <div className="text-green-100">{success && result}</div>
+       
     <div className="flex justify-center gap-4 mt-6">
      <input
       type="submit"

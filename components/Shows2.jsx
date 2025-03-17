@@ -5,12 +5,10 @@ import CarteValentine from "./CarteValentine";
 import imageB_0 from "@/public/img/imageB_0.webp";
 import Image from "next/image";
 
-export default function Shows2({ changePage }) {
+export default function Shows2() {
     return (
          
-        <div className="relative flex-1 flex flex-col items-center bg-black text-white p-6">
-            {/* Barre de navigation */}
-            <BarShows changePage={changePage} />
+        <div className="relative flex-1 flex flex-col items-center p-6">
 
             <div className="bg-black-800 g-gray-800 rounded-lg overflow-hidden shadow-xl ">
                         

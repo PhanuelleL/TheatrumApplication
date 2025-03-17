@@ -6,14 +6,10 @@ import Image from "next/image";
 import Timer  from "./Timer";
 
 
-export default function Shows1({ changePage }) {
-    // const images = [image_A1, image_A2, image_A3, image_A4]
+export default function Shows1() {
     return (
         
         <div className="relative flex-1 flex flex-col items-center p-6">
-        
-            <BarShows changePage={changePage} />
-
             <div className="bg-black-800 g-gray-800 rounded-lg overflow-hidden shadow-xl">             
                 <Image 
                     src={imageA_0} 

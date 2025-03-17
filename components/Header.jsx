@@ -1,8 +1,11 @@
-'use client';
+"use client";
 import Link from "next/link";
+import BarShows from "./BarShows";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { MdAccountCircle, MdFavorite } from "react-icons/md";
+import { MdFavorite } from "react-icons/md";
+import { IoMdLogIn } from "react-icons/io";
+
 import { IoLocationSharp } from "react-icons/io5";
 import { IoMdClose, IoMdHome } from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
@@ -11,7 +14,7 @@ import { FaPhone } from "react-icons/fa6";
 import { IoSunny } from "react-icons/io5";
 import { IoMdMoon } from "react-icons/io";
 
-import i18next from 'i18next';
+import i18next from "i18next";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { useMyContext } from "@/provider/MyContextProvider";
@@ -19,129 +22,135 @@ import { useMyContext } from "@/provider/MyContextProvider";
 import Image from "next/image";
 import TheaTrumBook from "@/public/img/TheaTrumBook.webp";
 
-export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); // Inverser l'état
-    };
-    const { theme, toggleTheme } = useMyContext();
+export default function Header({ changePage }) {
+ const [isMenuOpen, setIsMenuOpen] = useState(false);
+ const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+ const [isSpecialOpen, setIsSpecialOpen] = useState(false);
 
-    const { t } = useTranslation("header");
-    const routeur = useRouter();
-    
-    return (
-     <header>
-      {/* Barre de navigation principale */}
-      <nav className="container mx-auto flex max-w-7xl justify-between items-center p-4 lg:px-8">
-       {/* Logo */}
-       <div className="flex lg:flex-1">
-        <Link href="/">
-         <Image
-          src={TheaTrumBook}
-          alt="Logo Theatrum"
-          width={100}
-          height={150}
-          className="cursor-pointer"
-         />
-        </Link>
-       </div>
+ const { theme, toggleTheme } = useMyContext();
+ const { t } = useTranslation("header");
 
-       {/* Barre de recherche (visible sur tous les écrans) */}
-       <div className="flex-grow flex justify-center mx-4">
-        <div className="relative w-full max-w-md">
-         <input
-          className="bg-zinc-600 rounded-lg pl-10 pr-3 w-full h-10 text-white focus:outline-none"
-          type="text"
-          name="research"
-          placeholder="Search..."
-          aria-label="Search"
-         />
-         <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-500" />
-        </div>
-       </div>
+ return (
+  <header className="fixed top-0 left-0 w-full bg-black h-50 bg-opacity-90 shadow-md z-50">
+   {/* Barre de navigation principale */}
+   <nav className="container mx-auto max-w-7xl flex items-center justify-between px-4 md:px-8 h-full">
+    {/* Logo */}
+    <div className="flex items-center">
+     <Link href="/">
+      <Image
+       src={TheaTrumBook}
+       alt="Logo Theatrum"
+       width={100}
+       height={50}
+       className="cursor-pointer"
+      />
+     </Link>
+    </div>
 
-       {/* Icônes (compte, localisation, favoris, langue) */}
-       <div className="flex items-center space-x-5">
-        <Link href="/connexion">
-         <MdAccountCircle color="FFD700" size={30} className="cursor-pointer" />
-        </Link>
+    {/* Barre de recherche (cachée en mobile) */}
+    <div className="hidden md:flex flex-grow justify-center">
+     <div className="relative w-full max-w-md">
+      <input
+       className="bg-zinc-600 text-white rounded-lg pl-10 pr-3 w-full h-10 focus:outline-none"
+       type="text"
+       name="research"
+       placeholder="Search..."
+       aria-label="Search"
+      />
+      <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-yellow-500" />
+     </div>
+    </div>
 
-        <IoLocationSharp color="FFD700" size={30} className="cursor-pointer" />
-        <MdFavorite color="FFD700" size={30} className="cursor-pointer" />
-        <Link href="/contact">
-         <FaPhone color="FFD700" size={25} className="cursor-pointer" />
-        </Link>
-        <button className="ml-auto text-2xl" onClick={toggleTheme}>
-         {theme === "light" ? (
-          <IoMdMoon color="FFD700" />
-         ) : (
-          <IoSunny color="FFD700" />
-         )}
-        </button>
+    {/* Icônes de navigation */}
+    <div className="flex items-center space-x-4">
+     <Link href="/connexion" aria-label="Login">
+      <IoMdLogIn size={28} className="text-yellow-500 cursor-pointer" />
+     </Link>
+     <IoLocationSharp size={28} className="text-yellow-500 cursor-pointer" />
+     <MdFavorite size={28} className="text-yellow-500 cursor-pointer" />
+     <Link href="/contact">
+      <FaPhone size={24} className="text-yellow-500 cursor-pointer" />
+     </Link>
 
-        <select
-         onChange={(e) => i18next.changeLanguage(e.target.value)}
-         defaultValue={i18next.language}
-         className="text-black bg-yellow-400 border-color-yellow"
-        >
-         <option value="en">EN</option>
-         <option value="fr">FR</option>
-        </select>
+     {/* Toggle Theme */}
+     <button
+      className="text-2xl"
+      onClick={toggleTheme}
+      aria-label="Toggle Theme"
+     >
+      {theme === "light" ? (
+       <IoMdMoon className="text-yellow-500" />
+      ) : (
+       <IoSunny className="text-yellow-500" />
+      )}
+     </button>
 
-        {/* Bouton du menu mobile (visible uniquement sur les petits écrans) */}
-        <button
-         className="md:hidden"
-         onClick={toggleMenu}
-         aria-label="Toggle menu"
-        >
-         {isMenuOpen ? (
-          <IoMdClose size={25} color="FFD700" />
-         ) : (
-          <TiThMenu size={25} color="FFD700" />
-         )}
-        </button>
-       </div>
-      </nav>
+     {/* Langue */}
+     <select
+      onChange={(e) => i18next.changeLanguage(e.target.value)}
+      defaultValue={i18next.language}
+      className="text-black bg-yellow-400 border-none p-1 rounded"
+     >
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+     </select>
 
-      {/* Menu de navigation (mobile et desktop) */}
-      <div className={`${isMenuOpen ? "block" : "hidden"} md:block py-3`}>
-       <ul className="flex flex-col md:flex-row md:space-x-7 space-y-3 md:space-y-0 text-lg items-center justify-center">
-        <li>
-         <Link
-          href="/"
-          className="flex items-center space-x-2 hover:text-yellow-500"
-         >
-          <IoMdHome size={25} color="#FFD700" />
-         </Link>
-        </li>
+     {/* Menu burger pour mobile */}
+     <button
+      onClick={toggleMenu}
+      className="md:hidden"
+      aria-label="Toggle Menu"
+     >
+      {isMenuOpen ? (
+       <IoMdClose size={30} className="text-yellow-500" />
+      ) : (
+       <TiThMenu size={30} className="text-yellow-500" />
+      )}
+     </button>
+    </div>
+   </nav>
 
-        <li>
-         <button className="hover:border-b-4 hover:border-yellow-500">
-          {t("header.dates")}
-         </button>
-        </li>
-        <li>
-         <button className="hover:border-b-4 hover:border-yellow-500">
-          {t("header.reviews")}
-         </button>
-        </li>
-        <li>
-         <button className="hover:border-b-4 hover:border-yellow-500">
-          {t("header.tickets")}
-         </button>
-        </li>
-        <li>
-         <button className="hover:border-b-4 hover:border-yellow-500">
-          {t("header.book")}
-         </button>
-        </li>
-        <li>
-         <button className="hover:border-b-4 hover:border-yellow-500">
-          {t("header.special")}
-         </button>
-        </li>
-       </ul>
-      </div>
-     </header>
-    );
+   {/* Menu mobile */}
+   <div
+    className={`py-2 ${
+     isMenuOpen ? "block" : "hidden"
+    } md:flex md:space-x-7 md:items-center md:justify-center`}
+   >
+    <ul className="flex flex-col md:flex-row md:space-x-7 space-y-3 md:space-y-0 text-lg">
+     <li>
+      <Link
+       href="/"
+       className="flex items-center space-x-2 hover:text-yellow-500"
+      >
+       <IoMdHome size={25} color="#FFD700" />
+      </Link>
+     </li>
+     <li>
+      <Link
+       href="/livres"
+       className="rounded-full border-solid border-yellow-400 border-b-2 w-400  text-center hover:text-yellow-100 hover-border"
+      >
+       {t("header.dates")}
+      </Link>
+     </li>
+     <li className="rounded-full border-solid border-yellow-400 border-b-2 w-100 h-8 text-center hover:text-yellow-100 hover-border">
+      <Link href="/contact">{t("header.tickets")}</Link>
+     </li>
+
+     {/* Bouton avec sous-menu */}
+     <li className="relative">
+      <button
+       className="rounded-full border-solid border-yellow-400 border-b-2 w-40 h-8 text-center hover:text-yellow-100 hover-border"
+       onClick={() => setIsSpecialOpen(!isSpecialOpen)}
+      >
+       {t("header.special")}
+      </button>
+
+      {/* Sous-menu */}
+      {isSpecialOpen && <BarShows changePage={changePage} />}
+     </li>
+    </ul>
+   </div>
+  </header>
+ );
 }

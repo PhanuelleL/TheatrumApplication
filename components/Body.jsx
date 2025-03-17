@@ -14,7 +14,7 @@ export default function Body({ children }) {
    } text-${theme === "light" ? "black" : "white"}`}
   >
    <Header />
-   <main className="flex-1">{children}</main>
+   <main className="flex-1 pt-40">{children}</main>
    <Footer />
   </body>
  );
