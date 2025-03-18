@@ -9,13 +9,11 @@ import { IoMdLogIn } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoMdClose, IoMdHome } from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
-import { GrLanguage } from "react-icons/gr";
 import { FaPhone } from "react-icons/fa6";
 import { IoSunny } from "react-icons/io5";
 import { IoMdMoon } from "react-icons/io";
 
 import i18next from "i18next";
-import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { useMyContext } from "@/provider/MyContextProvider";
 
@@ -31,7 +29,11 @@ export default function Header({ changePage }) {
  const { t } = useTranslation("header");
 
  return (
-  <header className="fixed top-0 left-0 w-full bg-black h-50 bg-opacity-90 shadow-md z-50">
+  <header
+   className={`fixed top-0 left-0 w-full h-50 ${
+    theme === "light" ? "bg-white" : "bg-black"
+   } z-50`}
+  >
    {/* Barre de navigation principale */}
    <nav className="container mx-auto max-w-7xl flex items-center justify-between px-4 md:px-8 h-full">
     {/* Logo */}
@@ -124,17 +126,22 @@ export default function Header({ changePage }) {
       >
        <IoMdHome size={25} color="#FFD700" />
       </Link>
-     </li>
+                 </li>
+                 
      <li>
-      <Link
-       href="/livres"
-       className="rounded-full border-solid border-yellow-400 border-b-2 w-400  text-center hover:text-yellow-100 hover-border"
-      >
-       {t("header.dates")}
+      <Link href="/livres">
+       <button className="rounded-full border-solid border-yellow-400 border-b-2 w-40 h-8 text-center hover:text-yellow-100 hover-border">
+        {t("header.book")}
+       </button>
       </Link>
      </li>
-     <li className="rounded-full border-solid border-yellow-400 border-b-2 w-100 h-8 text-center hover:text-yellow-100 hover-border">
-      <Link href="/contact">{t("header.tickets")}</Link>
+         
+     <li>
+      <Link href="/contact">
+       <button className="rounded-full border-solid border-yellow-400 border-b-2 w-40 h-8 text-center hover:text-yellow-100 hover-border">
+        {t("header.contact")}
+       </button>
+      </Link>
      </li>
 
      {/* Bouton avec sous-menu */}
@@ -147,7 +154,9 @@ export default function Header({ changePage }) {
       </button>
 
       {/* Sous-menu */}
-      {isSpecialOpen && <BarShows changePage={changePage} />}
+      {isSpecialOpen && (
+       <BarShows changePage={changePage} setIsSpecialOpen = {setIsSpecialOpen} />
+      )}
      </li>
     </ul>
    </div>
