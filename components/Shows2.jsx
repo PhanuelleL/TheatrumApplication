@@ -1,5 +1,4 @@
 import Timer from './Timer';
-import BarShows from "./BarShows";
 import docList from "@/public/json/valentineDoc.json";
 import CarteValentine from "./CarteValentine";
 import imageB_0 from "@/public/img/imageB_0.webp";
@@ -10,7 +9,7 @@ export default function Shows2() {
          
         <div className="relative flex-1 flex flex-col items-center p-6">
 
-            <div className="bg-black-800 g-gray-800 rounded-lg overflow-hidden shadow-xl ">
+            <div className="rounded-lg overflow-hidden shadow-xl ">
                         
                         <Image 
                             src={imageB_0} 

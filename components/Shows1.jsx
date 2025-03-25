@@ -1,4 +1,3 @@
-import BarShows from "./BarShows";
 import docList from "@/public/json/africaDoc.json";
 import imageA_0 from "@/public/img/imageA_0.webp";
 import CarteValentine from "./CarteValentine";
@@ -10,7 +9,7 @@ export default function Shows1() {
     return (
         
         <div className="relative flex-1 flex flex-col items-center p-6">
-            <div className="bg-black-800 g-gray-800 rounded-lg overflow-hidden shadow-xl">             
+            <div className=" rounded-lg overflow-hidden shadow-xl">             
                 <Image 
                     src={imageA_0} 
                     alt="africa event"

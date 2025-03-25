@@ -1,17 +1,15 @@
 "use client";
 import Link from "next/link";
+
 import BarShows from "./BarShows";
 import { useState } from "react";
+
 import { FaSearch } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
-import { IoMdLogIn } from "react-icons/io";
-
-import { IoLocationSharp } from "react-icons/io5";
-import { IoMdClose, IoMdHome } from "react-icons/io";
+import { IoMdLogIn, IoMdMoon, IoMdClose, IoMdHome } from "react-icons/io";
+import { IoLocationSharp, IoSunny } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { FaPhone } from "react-icons/fa6";
-import { IoSunny } from "react-icons/io5";
-import { IoMdMoon } from "react-icons/io";
 
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
@@ -70,7 +68,7 @@ export default function Header({ changePage }) {
      </Link>
      <IoLocationSharp size={28} className="text-yellow-500 cursor-pointer" />
      <MdFavorite size={28} className="text-yellow-500 cursor-pointer" />
-     <Link href="/contact">
+     <Link href="/contact" aria-label="contact">
       <FaPhone size={24} className="text-yellow-500 cursor-pointer" />
      </Link>
 
@@ -91,7 +89,8 @@ export default function Header({ changePage }) {
      <select
       onChange={(e) => i18next.changeLanguage(e.target.value)}
       defaultValue={i18next.language}
-      className="text-black bg-yellow-400 border-none p-1 rounded"
+      className="text-black bg-yellow-400 p-1 rounded"
+      aria-label="l"
      >
       <option value="en">EN</option>
       <option value="fr">FR</option>
@@ -122,25 +121,28 @@ export default function Header({ changePage }) {
      <li>
       <Link
        href="/"
+       aria-label="Accueuil"
        className="flex items-center space-x-2 hover:text-yellow-500"
       >
        <IoMdHome size={25} color="#FFD700" />
       </Link>
-                 </li>
-                 
+     </li>
+
      <li>
-      <Link href="/livres">
-       <button className="rounded-full border-solid border-yellow-400 border-b-2 w-40 h-8 text-center hover:text-yellow-100 hover-border">
-        {t("header.book")}
-       </button>
+      <Link
+       href="/livres"
+       className="rounded-full border-solid border-yellow-400 border-b-2 w-40 h-8 text-center hover:text-yellow-100 hover-border"
+      >
+       {t("header.book")}
       </Link>
      </li>
-         
+
      <li>
-      <Link href="/contact">
-       <button className="rounded-full border-solid border-yellow-400 border-b-2 w-40 h-8 text-center hover:text-yellow-100 hover-border">
-        {t("header.contact")}
-       </button>
+      <Link
+       href="/contact"
+       className="rounded-full border-solid border-yellow-400 border-b-2 w-40 h-8 text-center hover:text-yellow-100 hover-border"
+      >
+       {t("header.contact")}
       </Link>
      </li>
 
@@ -155,7 +157,7 @@ export default function Header({ changePage }) {
 
       {/* Sous-menu */}
       {isSpecialOpen && (
-       <BarShows changePage={changePage} setIsSpecialOpen = {setIsSpecialOpen} />
+       <BarShows changePage={changePage} setIsSpecialOpen={setIsSpecialOpen} />
       )}
      </li>
     </ul>

@@ -1,7 +1,5 @@
 {
- "header.dates": "Livres",
- "header.reviews": "Avis",
  "header.contact": "Contact",
- "header.book": "Reserver",
+ "header.book": "Livres",
  "header.special": "Spécial"
 }

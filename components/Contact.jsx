@@ -53,20 +53,20 @@ export default function Contact() {
  };
 
  return (
-  <div className="flex justify-center items-center bg-black min-h-screen border-yellow-400 text-white p-6">
+  <div className="flex justify-center items-center min-h-screen border-yellow-400 p-6">
    <form
     onSubmit={handleSubmit(sendMail)}
-    className="bg-black p-8 rounded-lg shadow-lg w-full max-w-lg border-2 border-yellow-400"
+    className=" p-8 rounded-lg shadow-lg w-full max-w-lg border-2 border-yellow-400"
    >
     <h1 className="text-4xl font-bold text-yellow-400 mb-6 text-center border-b-4 border-yellow-400 pb-2">
      Contactez-nous
     </h1>
-    <label className="block text-white font-semibold mt-4">
+    <label className="block font-semibold mt-4">
      Nom:
      <input
       {...register("nom", { required: "Champ obligatoire" })}
       type="text"
-      className="w-full p-3 rounded bg-black border border-yellow text-white focus:ring-2 focus:ring-bordeaux"
+      className="w-full p-3 rounded border border-yellow focus:ring-2 focus:ring-bordeaux"
      />
      {errors.nom && (
       <span className="text-yellow-500 text-xs">{errors.nom.message}</span>
@@ -84,7 +84,7 @@ export default function Contact() {
        },
       })}
       type="text"
-      className="w-full p-3 rounded bg-black border border-gold text-white focus:ring-2 focus:ring-bordeaux"
+      className="w-full p-3 rounded border border-gold focus:ring-2 focus:ring-bordeaux"
      />
      {errors.email && (
       <span className="text-yellow-500 text-xs">{errors.email.message}</span>
@@ -95,7 +95,7 @@ export default function Contact() {
      <input
       {...register("objet", { required: "Champ obligatoire" })}
       type="text"
-      className="w-full p-3 rounded bg-black border border-gold text-white focus:ring-2 focus:ring-bordeaux"
+      className="w-full p-3 rounded border border-gold focus:ring-2 focus:ring-bordeaux"
      />
      {errors.objet && (
       <span className="text-yellow-500 text-xs">{errors.objet.message}</span>
@@ -105,7 +105,7 @@ export default function Contact() {
      Message:
      <textarea
       {...register("message", { required: "Champ obligatoire" })}
-      className="w-full p-3 rounded bg-black border border-gold text-white focus:ring-2 focus:ring-bordeaux"
+      className="w-full p-3 rounded border border-gold focus:ring-2 focus:ring-bordeaux"
       rows={5}
      ></textarea>
      {errors.message && (

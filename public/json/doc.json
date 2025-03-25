@@ -5,7 +5,7 @@
         "description": "Un voyage dans l'univers mystérieux du Fantôme.",
         "date": "2025-03-15",
         "location": "Paris, France",
-        "image": ""
+        "image": "/img/imageB_1.webp"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "description": "La célèbre histoire d'amour intemporelle.",
         "date": "2025-06-10",
         "location": "Londres, UK",
-        "image": ""
+        "image": "/img/imageB_1.webp"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "description": "Une pièce classique de Shakespeare revisitée.",
         "date": "2025-07-20",
         "location": "New York, USA",
-        "image": ""
+        "image": "/img/imageB_1.webp"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "description": "Un chef-d'œuvre poétique de Edmond Rostand.",
         "date": "2025-10-15",
         "location": "Bruxelles, Belgique",
-        "image": ""
+        "image": "/img/imageB_1.webp"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "description": "Une histoire émouvante d'amour et de sacrifice.",
         "date": "2025-12-12",
         "location": "Rome, Italie",
-        "image": ""
+        "image": "/img/imageB_1.webp"
     },
     {
         "id": 6,
@@ -45,6 +45,6 @@
         "description": "Un spectacle musical inspiré du roman de Victor Hugo.",
         "date": "2025-06-18",
         "location": "Palais des Congrès, Paris",
-        "image": ""
+        "image": "/img/imageB_1.webp"
     }
 ]

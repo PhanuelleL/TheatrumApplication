@@ -1,18 +1,18 @@
 export default function Connexion() {
  return (
-  <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-6">
+  <div className="flex flex-col items-center justify-center min-h-screen p-6">
    <h1 className="text-4xl font-bold text-yellow-400 mb-6 border-b-4 border-yellow-400 pb-2">
     Connexion
    </h1>
 
-   <div className="bg-black p-8 rounded-lg shadow-lg w-full max-w-md border">
+   <div className="p-8 rounded-lg shadow-lg w-full max-w-md border">
     <form className="grid grid-cols-1 gap-6">
      <div>
       <label className="block text-whitte font-semibold">Email</label>
       <input
        type="email"
        placeholder="Entrer votre email"
-       className="w-full p-3 rounded bg-black border border-gold text-white focus:ring-2"
+       className="w-full p-3 rounded border border-gold focus:ring-2"
       />
      </div>
 
@@ -21,7 +21,7 @@ export default function Connexion() {
       <input
        type="password"
        placeholder="Votre mot de passe"
-       className="w-full p-3 rounded bg-black border border-gold text-white "
+       className="w-full p-3 rounded border border-gold "
       />
      </div>
 
@@ -30,7 +30,7 @@ export default function Connexion() {
      </button>
     </form>
 
-    <div className="mt-4 text-center text-white">
+    <div className="mt-4 text-center">
      <a href="#" className="text-sm hover:text-bordeaux">
       Mot de passe oublié ?
      </a>

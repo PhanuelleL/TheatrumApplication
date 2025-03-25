@@ -1,5 +1,16 @@
 import CarteAcceuil from "@/components/CarteAcceuil";
 import docList from "@/public/json/doc.json";
+
+export const metadata = {
+ title: "TheaTrum | Livres",
+ description: "Présentation des livres pour pieces",
+ openGraph: {
+  title: "TheaTrum | Livres",
+  description: "Présentation des livres pour pieces",
+  images: ["./react.webp"],
+ },
+};
+
 export default function Page() {
  return (
   <>
