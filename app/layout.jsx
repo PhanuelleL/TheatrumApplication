@@ -11,7 +11,7 @@ import Body from "@/components/Body";
 import MyContextProvider from "@/provider/MyContextProvider";
 import { appWithTranslation } from "next-i18next";
 import i18n from "@/i18next";
-
+import metadata from "./metadata"
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,6 +20,7 @@ const inter = Inter({ subsets: ['latin'] });
 //   title: 'TheaTrum-app',
 //   description: 'Site web de présentation des différentes pièces de théâtre',
 // };
+<metadata/>
 
 function RootLayout({ children }) {
     return (

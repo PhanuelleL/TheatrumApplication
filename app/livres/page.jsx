@@ -3,11 +3,12 @@ import docList from "@/public/json/doc.json";
 
 export const metadata = {
  title: "TheaTrum | Livres",
- description: "Présentation des livres pour pieces",
+    description: "Présentation des livres pour pieces",
+  metadataBase: new URL("http://localhost:3000"),
  openGraph: {
   title: "TheaTrum | Livres",
   description: "Présentation des livres pour pieces",
-  images: ["./react.webp"],
+  images: ["./logo.webp"],
  },
 };
 

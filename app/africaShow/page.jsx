@@ -2,11 +2,12 @@ import Shows1 from "@/components/Shows1";
 
 export const metadata = {
  title: "TheaTrum | AfricaShow",
- description: "Présentation des evenments de la journée d'Afrique",
+    description: "Présentation des evenments de la journée d'Afrique",
+  metadataBase: new URL("http://localhost:3000"),
  openGraph: {
   title: "TheaTrum | AfricaShow",
   description: "Présentation des evenments de la journée d'Afrique",
-  images: ["./react.webp"],
+  images: ['./logo.webp'],
  },
 };
 
