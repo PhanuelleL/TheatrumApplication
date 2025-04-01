@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Le Fantôme de l'Opéra",
+        "description": "Un voyage dans l'univers mystérieux du Fantôme.",
+        "date": "2025-03-15",
+        "location": "Paris, France",
+        "image": "/img/imageB_1.webp"
+    },
+    {
+        "id": 2,
+        "title": "Roméo et Juliette",
+        "description": "La célèbre histoire d'amour intemporelle.",
+        "date": "2025-06-10",
+        "location": "Londres, UK",
+        "image": "/img/imageB_1.webp"
+    },
+    {
+        "id": 3,
+        "title": "Hamlet",
+        "description": "Une pièce classique de Shakespeare revisitée.",
+        "date": "2025-07-20",
+        "location": "New York, USA",
+        "image": "/img/imageB_1.webp"
+    },
+    {
+        "id": 4,
+        "title": "Cyrano de Bergerac",
+        "description": "Un chef-d'œuvre poétique de Edmond Rostand.",
+        "date": "2025-10-15",
+        "location": "Bruxelles, Belgique",
+        "image": "/img/imageB_1.webp"
+    },
+    {
+        "id": 5,
+        "title": "La Dame aux Camélias",
+        "description": "Une histoire émouvante d'amour et de sacrifice.",
+        "date": "2025-12-12",
+        "location": "Rome, Italie",
+        "image": "/img/imageB_1.webp"
+    },
+    {
+        "id": 6,
+        "title": "Notre-Dame de Paris",
+        "description": "Un spectacle musical inspiré du roman de Victor Hugo.",
+        "date": "2025-06-18",
+        "location": "Palais des Congrès, Paris",
+        "image": "/img/imageB_1.webp"
+    }
+]
