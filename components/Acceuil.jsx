@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import book from "@/public/img/book.webp";
 import background from "@/public/img/background.webp";
+import InstallPrompt from './InstallPrompt';
 
 export default function Acceuil() {
     return (
@@ -22,6 +23,7 @@ export default function Acceuil() {
         <h2 className="text-yellow-200 text-lg sm:text-2xl md:text-3xl lg:text-2xl mt-2 font-light drop-shadow-lg">
          Vivez la magie des émotions de vos romans
         </h2>
+        <InstallPrompt className='bg-black text-white'/>
        </div>
 
        <div className="absolute bottom-10 right-5 sm:bottom-20 sm:right-40 md:right-10 md:bottom-10 lg:top-32 lg:right-5">
