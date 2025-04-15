@@ -1,13 +1,14 @@
 "use client";
 import Image from 'next/image';
 import book from "@/public/img/book.webp";
+import AnimatedMotion from "@/components/AnimatedMotion";
 import background from "@/public/img/background.webp";
 import InstallPrompt from './InstallPrompt';
 
 export default function Acceuil() {
     return (
      <div>
-      <div className="relative max-w-7xl mx-auto flex bg-yellow">
+      <div className="relative sm:top-2 max-w-7xl mx-auto flex bg-yellow">
        <Image
         src={background}
         alt="bg haut"
@@ -23,11 +24,11 @@ export default function Acceuil() {
         <h2 className="text-yellow-200 text-lg sm:text-2xl md:text-3xl lg:text-2xl mt-2 font-light drop-shadow-lg">
          Vivez la magie des émotions de vos romans
         </h2>
-        <InstallPrompt className='bg-black text-white'/>
+        <AnimatedMotion />
        </div>
 
-       <div className="absolute bottom-10 right-5 sm:bottom-20 sm:right-40 md:right-10 md:bottom-10 lg:top-32 lg:right-5">
-        <Image src={book} alt="Logo Theatrum" width={500} height={500} />
+       <div className="absolute bottom-10 right-5 sm:bottom-10 sm:right-5 md:right-10 md:bottom-10 lg:top-32 lg:right-5">
+        <Image src={book} alt="Logo Theatrum" width={600} height={600} />
        </div>
       </div>
 
