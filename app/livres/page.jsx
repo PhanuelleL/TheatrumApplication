@@ -3,8 +3,10 @@ import docList from "@/public/json/doc.json";
 
 export const metadata = {
  title: "TheaTrum | Livres",
-    description: "Présentation des livres pour pieces",
-  metadataBase: new URL("http://localhost:3000"),
+ description: "Présentation des livres pour pieces",
+ metadataBase: new URL(
+  "https://theatrum-application-r65pw3gga-phanuelle-lienous-projects.vercel.app"
+ ),
  openGraph: {
   title: "TheaTrum | Livres",
   description: "Présentation des livres pour pieces",

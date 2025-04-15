@@ -2,8 +2,10 @@ import Contact from "@/components/Contact";
 
 export const metadata = {
  title: "TheaTrum | Contact",
-    description: "Contact du site",
-  metadataBase: new URL("http://localhost:3000"),
+ description: "Contact du site",
+ metadataBase: new URL(
+  "https://theatrum-application-r65pw3gga-phanuelle-lienous-projects.vercel.app"
+ ),
  openGraph: {
   title: "TheaTrum | Contact",
   description: "Contact du site",
