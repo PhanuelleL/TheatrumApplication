@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://theatrum-application-r65pw3gga-phanuelle-lienous-projects.vercel.app/</loc>
+        <loc>https://theatrum-application.vercel.app/</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://theatrum-application-r65pw3gga-phanuelle-lienous-projects.vercel.app/connexion</loc>
+        <loc>https://theatrum-application.vercel.app/connexion</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://theatrum-application-r65pw3gga-phanuelle-lienous-projects.vercel.app/contact</loc>
+        <loc>https://theatrum-application.vercel.app/contact</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://theatrum-application-r65pw3gga-phanuelle-lienous-projects.vercel.app/documents</loc>
+        <loc>https://theatrum-application.vercel.app/documents</loc>
         <lastmod>2024-05-08</lastmod>
         <changefreq>never</changefreq>
         <priority>0.7</priority>

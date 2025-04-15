@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://localhost:3000/sitemap.xml
+Sitemap: https://theatrum-application.vercel.app/sitemap.xml

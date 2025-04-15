@@ -4,9 +4,7 @@ import docList from "@/public/json/doc.json";
 export const metadata = {
  title: "TheaTrum | Livres",
  description: "Présentation des livres pour pieces",
- metadataBase: new URL(
-  "https://theatrum-application-r65pw3gga-phanuelle-lienous-projects.vercel.app"
- ),
+ metadataBase: new URL("https://theatrum-application.vercel.app/"),
  openGraph: {
   title: "TheaTrum | Livres",
   description: "Présentation des livres pour pieces",
